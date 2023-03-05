@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import { SectionHeader } from '../../../styles';
 import {
   FaPenNib,
   FaPaintRoller,
@@ -10,6 +9,7 @@ import {
   FaBuilding,
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { SectionHeader } from '../../common';
 
 const serviceItems = [
   {
@@ -59,10 +59,7 @@ const renderServiceItem = () => {
 const About: FC = () => {
   return (
     <StyledAbout>
-      <SectionHeader>
-        <h1>About</h1>
-        <div className="underline" />
-      </SectionHeader>
+      <SectionHeader title="About" />
       <Services variants={container} initial="hidden" animate="show">
         {renderServiceItem()}
         <ImageWrapper variants={serviceAnim}>

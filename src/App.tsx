@@ -1,11 +1,12 @@
 import { Layout } from './components/layouts';
-import { About, Hero } from './components/section';
+import { About, Hero, Team } from './components/section';
 
 function App() {
   return (
     <Layout>
       <Hero />
       <About />
+      <Team />
     </Layout>
   );
 }
