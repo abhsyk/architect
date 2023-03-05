@@ -1,5 +1,5 @@
 import { Layout } from './components/layouts';
-import { About, Hero, Team } from './components/section';
+import { About, Contact, Hero, Team } from './components/section';
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <Hero />
       <About />
       <Team />
+      <Contact />
     </Layout>
   );
 }
