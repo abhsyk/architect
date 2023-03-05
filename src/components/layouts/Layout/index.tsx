@@ -12,7 +12,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 };
 
 const StyledLayout = styled.div`
-  display: none;
+  /* display: none; */
 `;
 
 export default Layout;
