@@ -1,7 +1,10 @@
 import { FC } from 'react';
+import styled from 'styled-components';
 
 const Hero: FC = () => {
-  return <div>Hero</div>;
+  return <StyledHero>Hero</StyledHero>;
 };
+
+const StyledHero = styled.div``;
 
 export default Hero;

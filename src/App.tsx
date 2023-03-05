@@ -1,11 +1,11 @@
-import { GlobalStyle } from './styles';
+import { Layout } from './components/layouts';
+import { Hero } from './components/section';
 
 function App() {
   return (
-    <div>
-      <GlobalStyle />
-      <h1>Hello there</h1>
-    </div>
+    <Layout>
+      <Hero />
+    </Layout>
   );
 }
 
