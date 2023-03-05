@@ -18,23 +18,23 @@ const serviceItems = [
     text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
   },
   {
-    icon: <FaPaintRoller />,
-    title: 'Exterior',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
-  },
-  {
-    icon: <FaPencilAlt />,
-    title: 'Design',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
-  },
-  {
     icon: <FaPaintBrush />,
     title: 'Decoration',
     text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
   },
   {
+    icon: <FaPaintRoller />,
+    title: 'Exterior',
+    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
+  },
+  {
     icon: <FaRuler />,
     title: 'Planning',
+    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
+  },
+  {
+    icon: <FaPencilAlt />,
+    title: 'Design',
     text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
   },
   {
@@ -95,25 +95,25 @@ const Service = styled(motion.div)`
     grid-column: 4 / 7;
     grid-row: 1 / 3;
   }
-  /* Exterior */
-  :nth-child(2) {
-    grid-column: 3 / 6;
-    grid-row: 3 / 5;
-  }
-  /* Design */
-  :nth-child(3) {
-    grid-column: 4 / 7;
-    grid-row: 5 / -1;
-  }
   /* Decoration */
-  :nth-child(4) {
+  :nth-child(2) {
     grid-column: 11 / 14;
     grid-row: 1 / 3;
   }
+  /* Exterior */
+  :nth-child(3) {
+    grid-column: 3 / 6;
+    grid-row: 3 / 5;
+  }
   /* Planning */
-  :nth-child(5) {
+  :nth-child(4) {
     grid-column: 12 / 15;
     grid-row: 3 / 5;
+  }
+  /* Design */
+  :nth-child(5) {
+    grid-column: 4 / 7;
+    grid-row: 5 / -1;
   }
   /* Execution */
   :nth-child(6) {
@@ -153,17 +153,22 @@ const ImageWrapper = styled(motion.div)`
 
 // Animation variables
 const container = {
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 1, ease: 'easeOut', staggerChildren: 0.25 },
+
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+      staggerChildren: 0.3,
+      // when: 'beforeChildren',
+    },
   },
 };
 
 const serviceAnim = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 1 } },
+  hidden: { opacity: 0, scale: 0.95 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
 };
 
 export default About;
