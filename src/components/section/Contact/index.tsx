@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { Input } from '../../common';
 
 const Contact: FC = () => {
   return (
@@ -7,11 +8,10 @@ const Contact: FC = () => {
       <Wrapper>
         <Left />
         <Right>
-          <form action="">
-            <div className="input-group">
-              <input type="text" className="field" />
-              <label className="input-label">Full Name</label>
-            </div>
+          <form>
+            <Input label="Full Name" type="text" />
+            <Input label="Email" type="email" />
+            <Input label="Message" type="text" />
           </form>
         </Right>
       </Wrapper>
