@@ -1,12 +1,14 @@
 import { FC, PropsWithChildren } from 'react';
-import styled from 'styled-components';
-import { GlobalStyle } from '../../../styles';
+import styled, { ThemeProvider } from 'styled-components';
+import { GlobalStyle, theme } from '../../../styles';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <StyledLayout>
-      <GlobalStyle />
-      {children}
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
     </StyledLayout>
   );
 };

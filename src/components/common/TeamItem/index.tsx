@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 
 type Props = {
