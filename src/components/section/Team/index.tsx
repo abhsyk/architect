@@ -1,10 +1,20 @@
+import { motion } from 'framer-motion';
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useScroll } from '../../../hooks/useScroll';
+import { fade } from '../../../styles';
 import { SectionHeader, TeamItem } from '../../common';
 
 const Team: FC = () => {
+  const { element, controls } = useScroll();
+
   return (
-    <StyledTeam>
+    <StyledTeam
+      variants={fade}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+    >
       <SectionHeader title="Team" />
       <Cards>
         <TeamItem
@@ -31,7 +41,7 @@ const Team: FC = () => {
 };
 
 // Styles
-const StyledTeam = styled.div`
+const StyledTeam = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;

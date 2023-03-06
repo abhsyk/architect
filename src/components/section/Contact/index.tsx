@@ -1,11 +1,20 @@
 import { motion } from 'framer-motion';
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useScroll } from '../../../hooks/useScroll';
+import { fade } from '../../../styles';
 import { Input } from '../../common';
 
 const Contact: FC = () => {
+  const { element, controls } = useScroll();
+
   return (
-    <StyledContact>
+    <StyledContact
+      variants={fade}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+    >
       <Wrapper variants={container} initial="hidden" animate="show">
         <Left />
         <Right>
@@ -23,7 +32,7 @@ const Contact: FC = () => {
 };
 
 // Styles
-const StyledContact = styled.div`
+const StyledContact = styled(motion.div)`
   width: 100%;
   height: 60vh;
   background: ${({ theme }) => theme.colors.black};

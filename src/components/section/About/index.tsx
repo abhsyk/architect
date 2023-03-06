@@ -10,6 +10,8 @@ import {
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { SectionHeader } from '../../common';
+import { useScroll } from '../../../hooks/useScroll';
+import { fade } from '../../../styles';
 
 const serviceItems = [
   {
@@ -57,8 +59,15 @@ const renderServiceItem = () => {
 };
 
 const About: FC = () => {
+  const { element, controls } = useScroll();
+
   return (
-    <StyledAbout>
+    <StyledAbout
+      variants={fade}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+    >
       <SectionHeader title="About" />
       <Services variants={container} initial="hidden" animate="show">
         {renderServiceItem()}
@@ -71,7 +80,7 @@ const About: FC = () => {
 };
 
 // Styles
-const StyledAbout = styled.div`
+const StyledAbout = styled(motion.div)`
   width: 100%;
   background-color: #f5f5f5;
   padding-top: 1rem;

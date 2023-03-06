@@ -28,5 +28,13 @@ const fonts = {
 export const theme = {
   colors,
   fonts,
-  main: 'mediumseagreen',
+};
+
+// Animations
+export const fade = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { duration: 1, ease: 'easeOut' },
+  },
 };
