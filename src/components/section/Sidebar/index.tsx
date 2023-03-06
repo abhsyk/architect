@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { SocialMedia } from '../../common';
 
 const Sidebar: FC = () => {
   return (
@@ -31,6 +32,7 @@ const Sidebar: FC = () => {
           </a>
         </Item>
       </Menu>
+      <Social />
     </StyledSidebar>
   );
 };
@@ -78,6 +80,22 @@ const Item = styled.li`
     :hover::before {
       width: 100%;
     }
+  }
+`;
+
+const Social = styled(SocialMedia)`
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+
+  a {
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 

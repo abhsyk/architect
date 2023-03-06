@@ -1,17 +1,13 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { SocialMedia } from '../../common';
 
 const Footer: FC = () => {
   return (
     <StyledFooter>
       <Content>
         <Copyright>Copyright &copy; 2023 XYZ</Copyright>
-        <Social>
-          <FaFacebookF />
-          <FaInstagram />
-          <FaTwitter />
-        </Social>
+        <SocialMedia />
       </Content>
     </StyledFooter>
   );
@@ -38,15 +34,6 @@ const Copyright = styled.div`
   font-family: 'Baloo Da 2', serif;
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.grey};
-`;
-
-const Social = styled.div`
-  svg {
-    margin: 0 1rem;
-    font-size: 1.5rem;
-    color: ${({ theme }) => theme.colors.grey};
-    cursor: pointer;
-  }
 `;
 
 export default Footer;
