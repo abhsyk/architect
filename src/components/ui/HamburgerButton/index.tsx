@@ -23,7 +23,7 @@ const Button = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   cursor: pointer;
-  z-index: 100;
+  z-index: 150;
 
   span {
     position: absolute;
