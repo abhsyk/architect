@@ -7,17 +7,20 @@ import {
   Sidebar,
   Team,
 } from './components/section';
+import { UIContextProvider } from './context';
 
 function App() {
   return (
-    <Layout>
-      <Sidebar />
-      <Hero />
-      <About />
-      <Team />
-      <Contact />
-      <Footer />
-    </Layout>
+    <UIContextProvider>
+      <Layout>
+        <Sidebar />
+        <Hero />
+        <About />
+        <Team />
+        <Contact />
+        <Footer />
+      </Layout>
+    </UIContextProvider>
   );
 }
 
