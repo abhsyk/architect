@@ -1,13 +1,19 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useUI } from '../../../context';
 
 const HamburgerButton: FC = () => {
+  const { isSidebarOpen, openSidebar, closeSidebar } = useUI();
+
   return (
-    <Button>
+    <Button
+      className={`${isSidebarOpen ? 'active' : ''}`}
+      onClick={isSidebarOpen ? closeSidebar : openSidebar}
+    >
       <Line />
       <Line />
       <Line />
-      <span>Close</span>
+      <span onClick={closeSidebar}>Close</span>
     </Button>
   );
 };
@@ -29,7 +35,7 @@ const Button = styled.div`
     position: absolute;
     width: 6rem;
     height: 2rem;
-    /* left: 3rem; */
+    left: 3rem;
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.white};
     font-size: 1rem;
@@ -37,6 +43,9 @@ const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
 
     ::before {
       content: '';

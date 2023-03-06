@@ -12,7 +12,7 @@ export const useScroll = () => {
     } else {
       controls.start('hidden');
     }
-  }, [view]);
+  }, [view, controls]);
 
   return { element, controls };
 };

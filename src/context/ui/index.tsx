@@ -32,7 +32,7 @@ const UIContextProvider: FC<PropsWithChildren> = ({ children }) => {
       openSidebar,
       closeSidebar,
     };
-  }, [isSidebarOpen]);
+  }, [isSidebarOpen, openSidebar, closeSidebar]);
 
   return <UIContext.Provider value={config}>{children}</UIContext.Provider>;
 };

@@ -9,13 +9,13 @@ type Props = {
 const SocialMedia: FC<Props> = ({ className }) => {
   return (
     <StyledSocial className={className}>
-      <a>
+      <a href="/">
         <FaFacebookF />
       </a>
-      <a>
+      <a href="/">
         <FaInstagram />
       </a>
-      <a>
+      <a href="/">
         <FaTwitter />
       </a>
     </StyledSocial>
