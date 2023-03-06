@@ -12,8 +12,9 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const colors = {
-  primary: '',
-  grey: '#a7a7a7',
+  primary: '#E2B646;',
+  grey: '#A7A7A7',
+  white: '#FFF',
 };
 
 // Define what props.theme will look like
