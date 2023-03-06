@@ -44,6 +44,7 @@ const Social = styled.div`
     margin: 0 1rem;
     font-size: 2rem;
     color: ${({ theme }) => theme.colors.grey};
+    cursor: pointer;
   }
 `;
 

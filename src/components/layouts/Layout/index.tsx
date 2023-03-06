@@ -1,17 +1,20 @@
 import { FC, PropsWithChildren } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from '../../../styles';
-import { ScrollButton } from '../../ui';
+import { HamburgerButton, ScrollButton } from '../../ui';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <StyledLayout>
+    <>
+      <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        {children}
-        <ScrollButton />
+        <StyledLayout>
+          <HamburgerButton />
+          {children}
+          <ScrollButton />
+        </StyledLayout>
       </ThemeProvider>
-    </StyledLayout>
+    </>
   );
 };
 
