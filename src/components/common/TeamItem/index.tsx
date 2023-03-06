@@ -32,7 +32,7 @@ const TeamItem: FC<Props> = ({ name, position, description, image }) => {
 const Card = styled(motion.div)`
   position: relative;
   width: 20rem;
-  height: 25rem;
+  height: 30rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -41,12 +41,13 @@ const Card = styled(motion.div)`
 const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #262626;
+  background: #000;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.7;
   }
 `;
 
@@ -80,18 +81,19 @@ const Info = styled.div`
     font-size: 1rem;
     line-height: 1rem;
     font-weight: 300;
-    color: #eee;
+    color: ${({ theme }) => theme.colors.white};
     margin-bottom: 1.5rem;
   }
 
   button {
     width: 6rem;
     height: 1.8rem;
-    background-color: #c29525;
+    background: ${({ theme }) => theme.colors.primary};
     border: none;
     font-family: 'Baloo Da 2', serif;
     font-size: 1rem;
-    color: #eee;
+    color: ${({ theme }) => theme.colors.white};
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     border-radius: 0.2rem;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
   }

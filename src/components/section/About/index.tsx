@@ -17,32 +17,32 @@ const serviceItems = [
   {
     icon: <FaPenNib />,
     title: 'Interior',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
+    text: 'Duis sodales est a pharetra laoreet. Etiam congue quam sit amet egestas fringilla. Nunc non vulputate orci, sit amet ornare odio.',
   },
   {
     icon: <FaPaintBrush />,
     title: 'Decoration',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
+    text: 'Nulla facilisi. Cras interdum diam nec maximus finibus. Sed mattis ex ac quam blandit, et bibendum dui convallis.',
   },
   {
     icon: <FaPaintRoller />,
     title: 'Exterior',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
+    text: 'Aliquam odio purus, pulvinar bibendum eleifend eu, malesuada eget nibh. Donec molestie dui et risus elementum molestie eget vitae velit. Etiam elementum sed odio sed mollis.',
   },
   {
     icon: <FaRuler />,
     title: 'Planning',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
+    text: 'Vestibulum vel leo eget ligula accumsan sodales. Maecenas sed finibus purus. In lacus diam, finibus sed velit nec, ornare dignissim. Integer ornare eleifend justo.',
   },
   {
     icon: <FaPencilAlt />,
     title: 'Design',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
+    text: 'Euismod lorem congue id. Suspendisse potenti. Nam tempus mi eget turpis vulputate, ut consequat tellus suscipit. Nunc maximus vel arcu a efficitur.',
   },
   {
     icon: <FaBuilding />,
     title: 'Execution',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!',
+    text: 'Mauris feugiat et augue at finibus. Pellentesque non purus nec libero hendrerit commodo ac vitae mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra.',
   },
 ];
 

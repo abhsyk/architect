@@ -26,13 +26,13 @@ const Team: FC = () => {
         <TeamItem
           name="Ann Brown"
           position="Designer"
-          description='"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, impedit!"'
+          description='"Ut iaculis justo vitae risus bibendum vestibulum. Donec mi sapien, tempor at tortor vel."'
           image="images/person-2.jpg"
         />
         <TeamItem
           name="Mary Doe"
           position="Architect"
-          description='"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, impedit!"'
+          description='"Fusce ullamcorper eu massa id rhoncus. Duis non sem ac quam tincidunt iaculis."'
           image="images/person-3.jpg"
         />
       </Cards>
