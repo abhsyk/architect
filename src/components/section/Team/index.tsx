@@ -36,7 +36,7 @@ const StyledTeam = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem 8rem 2rem;
+  padding: 1rem 2rem 15rem 2rem;
 `;
 
 const Cards = styled.div`

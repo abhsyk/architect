@@ -74,6 +74,7 @@ const About: FC = () => {
 const StyledAbout = styled.div`
   width: 100%;
   background-color: #f5f5f5;
+  padding-top: 1rem;
   padding-bottom: 8rem;
 `;
 
@@ -122,7 +123,7 @@ const Service = styled(motion.div)`
   }
 
   p {
-    font-family: 'Josefin Slab', serif;
+    font-family: ${({ theme }) => theme.fonts.tertiary};
     font-size: 1rem;
     text-align: justify;
   }

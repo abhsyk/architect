@@ -20,7 +20,8 @@ const colors = {
 
 const fonts = {
   primary: '"Baloo Da 2", serif',
-  accent: '"Muli", serif',
+  seconday: '"Muli", serif',
+  tertiary: "'Josefin Slab', serif",
 };
 
 // Define what props.theme will look like

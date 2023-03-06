@@ -25,8 +25,8 @@ const Contact: FC = () => {
 // Styles
 const StyledContact = styled.div`
   width: 100%;
-  height: 100vh;
-  background-color: #272727;
+  height: 60vh;
+  background: ${({ theme }) => theme.colors.black};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,7 @@ const Right = styled.div`
     color: ${({ theme }) => theme.colors.white};
     border: none;
     margin-top: 2rem;
-    font-family: ${({ theme }) => theme.fonts.accent};
+    font-family: ${({ theme }) => theme.fonts.seconday};
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 300;

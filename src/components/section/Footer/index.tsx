@@ -25,6 +25,7 @@ const StyledFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 6rem;
 `;
 
 const Content = styled.div`
@@ -42,7 +43,7 @@ const Copyright = styled.div`
 const Social = styled.div`
   svg {
     margin: 0 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: ${({ theme }) => theme.colors.grey};
     cursor: pointer;
   }
