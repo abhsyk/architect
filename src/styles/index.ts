@@ -11,14 +11,21 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const colors = {
-  primary: '#E2B646;',
+const colors = {
+  primary: '#E2B646', // yellow-ish
   grey: '#A7A7A7',
+  black: '#272727',
   white: '#FFF',
+};
+
+const fonts = {
+  primary: '"Baloo Da 2", serif',
+  accent: '"Muli", serif',
 };
 
 // Define what props.theme will look like
 export const theme = {
   colors,
+  fonts,
   main: 'mediumseagreen',
 };
