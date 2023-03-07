@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
-import styled from 'styled-components';
+import { StyledSocial } from './styles';
 
 type Props = {
   className?: string;
@@ -21,17 +21,5 @@ const SocialMedia: FC<Props> = ({ className }) => {
     </StyledSocial>
   );
 };
-
-// Styles
-const StyledSocial = styled.div`
-  display: flex;
-
-  a {
-    margin: 0 1rem;
-    font-size: 1.5rem;
-    color: ${({ theme }) => theme.colors.grey};
-    cursor: pointer;
-  }
-`;
 
 export default SocialMedia;
