@@ -1,15 +1,21 @@
 import { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
 import styled from 'styled-components';
+import { respondTo } from '../../../styles';
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   // TextareaHTMLAttributes<HTMLTextAreaElement>
   label: string;
+  textarea?: boolean;
 }
 
-const Input: FC<Props> = ({ label, ...rest }) => {
+const Input: FC<Props> = ({ label, textarea, ...rest }) => {
   return (
     <StyledInput>
-      <input {...rest} className="field" placeholder=" " />
+      {textarea ? (
+        <textarea className="field" placeholder=" "></textarea>
+      ) : (
+        <input {...rest} className="field" placeholder=" " />
+      )}
       <label htmlFor={rest.id}>{label}</label>
     </StyledInput>
   );
@@ -30,19 +36,53 @@ const StyledInput = styled.div`
     font-size: 1.2rem;
     color: #4b4b4b;
 
-    :focus {
-      border-bottom-style: solid;
+    @media ${respondTo.xl} {
+      margin: 1.4rem 0;
+      width: 32rem;
+    }
+    @media ${respondTo.lg} {
+      width: 28rem;
+    }
+    @media ${respondTo.md} {
+      width: 24rem;
+    }
+    @media ${respondTo.sm} {
+      width: 18rem;
     }
 
-    :focus ~ label,
-    :not(:placeholder-shown) ~ label {
-      transform: translateY(-1.4rem);
-      font-size: 0.8rem;
+    :focus {
+      border-bottom-style: solid;
     }
   }
 
   input {
     height: 2rem;
+
+    :focus ~ label,
+    :not(:placeholder-shown) ~ label {
+      transform: translateY(1.9rem);
+      font-size: 0.8rem;
+
+      @media ${respondTo.lg} {
+        transform: translateY(2.2rem);
+      }
+    }
+  }
+
+  textarea {
+    height: 3rem;
+    resize: none;
+    overflow: hidden;
+
+    :focus ~ label,
+    :not(:placeholder-shown) ~ label {
+      transform: translateY(1.7rem);
+      font-size: 0.8rem;
+
+      @media ${respondTo.lg} {
+        transform: translateY(2.2rem);
+      }
+    }
   }
 
   label {

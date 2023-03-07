@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { FC, useEffect, useState } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 import styled from 'styled-components';
+import { respondTo } from '../../../styles';
 
 const ScrollButton: FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,6 +63,12 @@ const Button = styled(motion.div)`
   border-radius: 50%;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+
+  @media ${respondTo.sm} {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.2rem;
+  }
 `;
 
 // Animation variants

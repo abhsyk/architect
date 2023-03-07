@@ -1,11 +1,20 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import styled from 'styled-components';
 import { useUI } from '../../../context';
+import { respondTo } from '../../../styles';
 import { SocialMedia } from '../../common';
 
 const Sidebar: FC = () => {
   const { isSidebarOpen, closeSidebar } = useUI();
+
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = 'auto';
+    }
+  }, [isSidebarOpen]);
 
   return (
     <>
@@ -69,6 +78,10 @@ const StyledSidebar = styled(motion.div)`
   right: 0;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   z-index: 100;
+
+  @media ${respondTo.sm} {
+    width: 95%;
+  }
 `;
 
 const Menu = styled.ul`
@@ -86,6 +99,14 @@ const Item = styled.li`
     font-size: 2rem;
     color: ${({ theme }) => theme.colors.grey};
     position: relative;
+
+    @media ${respondTo.xl} {
+      font-size: 1.8rem;
+    }
+    @media ${respondTo.md} {
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
 
     ::before {
       content: attr(data-content);

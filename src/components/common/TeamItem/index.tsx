@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FC } from 'react';
 import styled from 'styled-components';
+import { respondTo } from '../../../styles';
 
 type Props = {
   image: string;
@@ -39,6 +40,17 @@ const Card = styled(motion.div)`
 
   :hover .info {
     opacity: 1;
+  }
+
+  @media ${respondTo.xl} {
+    width: 20rem;
+  }
+  @media ${respondTo.lg} {
+    width: 25rem;
+    margin-bottom: 3rem;
+  }
+  @media ${respondTo.sm} {
+    width: 20rem;
   }
 `;
 

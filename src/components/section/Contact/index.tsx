@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { useScroll } from '../../../hooks/useScroll';
-import { fade } from '../../../styles';
+import { fade, respondTo } from '../../../styles';
 import { Input } from '../../common';
 
 const Contact: FC = () => {
@@ -22,7 +22,7 @@ const Contact: FC = () => {
           <form>
             <Input label="Full Name" type="text" />
             <Input label="Email" type="email" />
-            <Input label="Message" type="text" />
+            <Input textarea label="Message" type="text" />
           </form>
           <button type="submit">Submit</button>
         </Right>
@@ -34,7 +34,7 @@ const Contact: FC = () => {
 // Styles
 const StyledContact = styled(motion.div)`
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   background: ${({ theme }) => theme.colors.black};
   display: flex;
   justify-content: center;
@@ -44,8 +44,18 @@ const StyledContact = styled(motion.div)`
 const Wrapper = styled(motion.div)`
   display: flex;
   width: 60%;
-  height: 32rem;
+  height: 38rem;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+
+  @media ${respondTo.xl} {
+    width: 80%;
+    height: 36rem;
+  }
+
+  @media ${respondTo.lg} {
+    width: 90%;
+    height: 32rem;
+  }
 
   h1 {
     font-family: ${({ theme }) => theme.fonts.primary};
@@ -53,6 +63,13 @@ const Wrapper = styled(motion.div)`
     font-weight: 300;
     color: ${({ theme }) => theme.colors.black};
     margin-bottom: 2rem;
+
+    @media ${respondTo.lg} {
+      margin-bottom: 1rem;
+    }
+    @media ${respondTo.md} {
+      font-size: 2.5rem;
+    }
   }
 `;
 
@@ -60,13 +77,24 @@ const Left = styled.div`
   width: 35%;
   background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(22, 22, 22, 0.9)),
     url(images/contact-bg.jpg) center no-repeat;
+
+  @media ${respondTo.lg} {
+    width: 0;
+  }
 `;
 
 const Right = styled.div`
   width: 65%;
   background: ${({ theme }) => theme.colors.white};
-  padding-top: 1rem;
+  padding-top: 3rem;
   text-align: center;
+
+  @media ${respondTo.xl} {
+    width: 100%;
+  }
+  @media ${respondTo.lg} {
+    padding-top: 2rem;
+  }
 
   form {
     width: 100%;
@@ -90,6 +118,12 @@ const Right = styled.div`
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+
+    @media ${respondTo.sm} {
+      margin-top: 2.5rem;
+      width: 18rem;
+      height: 2.5rem;
+    }
   }
 `;
 

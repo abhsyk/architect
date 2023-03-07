@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { respondTo } from '../../../styles';
 
 type Props = {
   title: string;
@@ -21,6 +22,11 @@ const Header = styled.div`
   align-items: center;
   padding-top: 3rem;
   padding-bottom: 5rem;
+
+  @media ${respondTo.lg} {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
 
   h1 {
     font-family: 'Muli', serif;

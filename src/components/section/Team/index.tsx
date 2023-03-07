@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { FC } from 'react';
 import styled from 'styled-components';
 import { useScroll } from '../../../hooks/useScroll';
-import { fade } from '../../../styles';
+import { fade, respondTo } from '../../../styles';
 import { SectionHeader, TeamItem } from '../../common';
 
 const Team: FC = () => {
@@ -47,6 +47,14 @@ const StyledTeam = styled(motion.div)`
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem 15rem 2rem;
+
+  @media ${respondTo.xl} {
+    padding-bottom: 10rem;
+  }
+  @media ${respondTo.md} {
+    padding-top: 1.8rem;
+    padding-bottom: 6rem;
+  }
 `;
 
 const Cards = styled.div`
@@ -54,6 +62,14 @@ const Cards = styled.div`
   justify-content: space-evenly;
   width: 100%;
   margin-top: 4rem;
+
+  @media ${respondTo.lg} {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media ${respondTo.xl} {
+    margin-top: 2rem;
+  }
 `;
 
 export default Team;
