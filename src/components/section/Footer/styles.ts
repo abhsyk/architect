@@ -5,7 +5,7 @@ import { respondTo } from '../../../styles';
 export const StyledFooter = styled.div`
   width: 100%;
   height: 10rem;
-  background: #17181b;
+  background: ${({ theme }) => theme.colors.black};
   display: flex;
   justify-content: center;
   align-items: center;

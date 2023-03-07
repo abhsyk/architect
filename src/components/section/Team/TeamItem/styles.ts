@@ -50,8 +50,8 @@ export const Info = styled.div`
 
   /* Name */
   h2 {
-    font-family: 'Baloo Da 2', serif;
-    color: #eee;
+    font-family: ${({ theme }) => theme.fonts.primary};
+    color: ${({ theme }) => theme.colors.white};
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.8rem;
@@ -59,16 +59,16 @@ export const Info = styled.div`
 
   /* Position */
   h3 {
-    font-family: 'Muli', serif;
+    font-family: ${({ theme }) => theme.fonts.seconday};
     font-size: 1.4rem;
     font-weight: 500;
-    color: #a52a2a;
+    color: ${({ theme }) => theme.colors.red};
     margin-bottom: 1rem;
   }
 
   /* Description */
   p {
-    font-family: 'Baloo da 2', serif;
+    font-family: ${({ theme }) => theme.fonts.primary};
     font-size: 1rem;
     line-height: 1rem;
     font-weight: 300;
@@ -81,7 +81,7 @@ export const Info = styled.div`
     height: 1.8rem;
     background: ${({ theme }) => theme.colors.primary};
     border: none;
-    font-family: 'Baloo Da 2', serif;
+    font-family: ${({ theme }) => theme.fonts.primary};
     font-size: 1rem;
     color: ${({ theme }) => theme.colors.white};
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { SectionHeader } from '../../common';
 import { useScroll } from '../../../hooks/useScroll';
-import { fade } from '../../../styles';
+import { fadeIn } from '../../../styles';
 import {
   ImageWrapper,
   Service,
@@ -29,7 +29,7 @@ const About: FC = () => {
 
   return (
     <StyledAbout
-      variants={fade}
+      variants={fadeIn}
       initial="hidden"
       animate={controls}
       ref={element}

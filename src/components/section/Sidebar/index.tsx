@@ -32,29 +32,17 @@ const Sidebar: FC = () => {
         exit="exit"
       >
         <Menu>
-          <Item
-            onClick={() => handleLocationReplace('/#home')}
-            data-content="Home"
-          >
-            Home
+          <Item onClick={() => handleLocationReplace('/#home')}>
+            <span data-content="Home">Home</span>
           </Item>
-          <Item
-            onClick={() => handleLocationReplace('/#about')}
-            data-content="About"
-          >
-            About
+          <Item onClick={() => handleLocationReplace('/#about')}>
+            <span data-content="About">About</span>
           </Item>
-          <Item
-            onClick={() => handleLocationReplace('/#team')}
-            data-content="Team"
-          >
-            Team
+          <Item onClick={() => handleLocationReplace('/#team')}>
+            <span data-content="Team">Team</span>
           </Item>
-          <Item
-            onClick={() => handleLocationReplace('/#contact')}
-            data-content="Contact"
-          >
-            Contact
+          <Item onClick={() => handleLocationReplace('/#contact')}>
+            <span data-content="Contact">Contact</span>
           </Item>
         </Menu>
         <Social />

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useScroll } from '../../../hooks/useScroll';
-import { fade } from '../../../styles';
+import { fadeIn } from '../../../styles';
 import { Input } from '../../common';
 import { containerAnim } from './animations';
 import { Left, Right, StyledContact, Wrapper } from './styles';
@@ -10,7 +10,7 @@ const Contact: FC = () => {
 
   return (
     <StyledContact
-      variants={fade}
+      variants={fadeIn}
       initial="hidden"
       animate={controls}
       ref={element}

@@ -7,7 +7,7 @@ import { SocialMedia } from '../../common';
 export const StyledSidebar = styled(motion.div)`
   position: fixed;
   background: ${({ theme }) => theme.colors.white};
-  width: 20rem;
+  width: 25rem;
   height: 100vh;
   top: 0;
   right: 0;
@@ -30,32 +30,36 @@ export const Item = styled.li`
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 2rem;
-  color: ${({ theme }) => theme.colors.grey};
-  position: relative;
-  cursor: pointer;
 
-  @media ${respondTo.xl} {
-    font-size: 1.8rem;
-  }
-  @media ${respondTo.md} {
-    display: inline-block;
-    margin: 0.5rem 0;
-  }
+  span {
+    color: ${({ theme }) => theme.colors.darkGray};
+    position: relative;
+    cursor: pointer;
 
-  ::before {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    color: ${({ theme }) => theme.colors.primary};
-    overflow: hidden;
-    white-space: nowrap;
-    transition: width 0.3s ease-in-out;
-  }
+    @media ${respondTo.xl} {
+      font-size: 1.8rem;
+    }
+    @media ${respondTo.md} {
+      margin: 0.5rem 0;
+    }
 
-  :hover::before {
-    width: 100%;
+    ::before {
+      content: attr(data-content);
+      /* background-color: ${({ theme }) => theme.colors.primary}; */
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      color: ${({ theme }) => theme.colors.primary};
+      overflow: hidden;
+      white-space: nowrap;
+      transition: width 0.3s ease-in-out;
+    }
+
+    :hover::before {
+      width: 100%;
+    }
   }
 `;
 

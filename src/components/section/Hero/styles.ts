@@ -24,7 +24,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Banner = styled(motion.div)`
-  font-family: 'Baloo Da 2', serif;
+  font-family: ${({ theme }) => theme.fonts.primary};
   position: absolute;
   top: 30%;
   left: 15%;
@@ -37,7 +37,7 @@ export const Banner = styled(motion.div)`
   h1 {
     font-size: 4rem;
     font-weight: 300;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.white};
     width: 50%;
     line-height: 5rem;
     letter-spacing: 0.1rem;
@@ -63,7 +63,7 @@ export const Banner = styled(motion.div)`
 
   p {
     font-size: 2rem;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.white};
     width: 70%;
     line-height: 2rem;
     letter-spacing: 0.05rem;
@@ -82,12 +82,12 @@ export const Banner = styled(motion.div)`
     width: 14rem;
     height: 3rem;
     border: none;
-    font-family: 'Muli', serif;
+    font-family: ${({ theme }) => theme.fonts.seconday};
     font-size: 1rem;
     text-transform: uppercase;
-    background-color: #c29525;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
     cursor: pointer;
 

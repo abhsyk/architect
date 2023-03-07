@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useScroll } from '../../../hooks/useScroll';
-import { fade } from '../../../styles';
+import { fadeIn } from '../../../styles';
 import { SectionHeader, TeamItem } from '../../common';
 import { Cards, StyledTeam } from './styles';
 
@@ -9,7 +9,7 @@ const Team: FC = () => {
 
   return (
     <StyledTeam
-      variants={fade}
+      variants={fadeIn}
       initial="hidden"
       animate={controls}
       ref={element}

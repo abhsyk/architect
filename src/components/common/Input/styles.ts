@@ -9,10 +9,10 @@ export const StyledInput = styled.div`
     width: 25rem;
     background-color: transparent;
     border: none;
-    border-bottom: 0.2rem dashed #636363;
+    border-bottom: 0.2rem dashed ${({ theme }) => theme.colors.darkGray};
     margin: 1.5rem 0;
     padding: 1rem 1rem 1rem 0;
-    font-family: 'Muli', serif;
+    font-family: ${({ theme }) => theme.fonts.seconday};
     font-size: 1.2rem;
     color: #4b4b4b;
 
@@ -68,7 +68,7 @@ export const StyledInput = styled.div`
   label {
     position: absolute;
     left: 0;
-    font-family: 'Baloo Da 2', serif;
+    font-family: ${({ theme }) => theme.fonts.primary};
     font-size: 1.2rem;
     color: #4b4b4b;
     text-transform: uppercase;

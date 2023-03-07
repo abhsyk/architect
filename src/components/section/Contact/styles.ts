@@ -6,7 +6,7 @@ import { respondTo } from '../../../styles';
 export const StyledContact = styled(motion.div)`
   width: 100%;
   height: 80vh;
-  background: ${({ theme }) => theme.colors.black};
+  background: ${({ theme }) => theme.colors.darkGray2};
   display: flex;
   justify-content: center;
   align-items: center;
