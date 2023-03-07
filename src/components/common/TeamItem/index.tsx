@@ -18,7 +18,7 @@ const TeamItem: FC<Props> = ({ name, position, description, image }) => {
       <ImageWrapper>
         <img src={image} alt={position} />
       </ImageWrapper>
-      <Info>
+      <Info className="info">
         <h2>{name}</h2>
         <h3>{position}</h3>
         <p>{description}</p>
@@ -31,11 +31,15 @@ const TeamItem: FC<Props> = ({ name, position, description, image }) => {
 // Styles
 const Card = styled(motion.div)`
   position: relative;
-  width: 20rem;
+  width: 22rem;
   height: 30rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
   overflow: hidden;
+
+  :hover .info {
+    opacity: 1;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -54,8 +58,10 @@ const ImageWrapper = styled.div`
 const Info = styled.div`
   position: absolute;
   bottom: 0;
-  padding: 1rem;
+  padding: 1.5rem;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.4s ease-out;
 
   /* Name */
   h2 {
@@ -96,6 +102,7 @@ const Info = styled.div`
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     border-radius: 0.2rem;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
   }
 `;
 

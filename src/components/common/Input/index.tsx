@@ -9,7 +9,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 const Input: FC<Props> = ({ label, ...rest }) => {
   return (
     <StyledInput>
-      <input {...rest} className="field" />
+      <input {...rest} className="field" placeholder=" " />
       <label htmlFor={rest.id}>{label}</label>
     </StyledInput>
   );
@@ -34,7 +34,8 @@ const StyledInput = styled.div`
       border-bottom-style: solid;
     }
 
-    :focus ~ label {
+    :focus ~ label,
+    :not(:placeholder-shown) ~ label {
       transform: translateY(-1.4rem);
       font-size: 0.8rem;
     }

@@ -6,14 +6,10 @@ const HamburgerButton: FC = () => {
   const { isSidebarOpen, openSidebar, closeSidebar } = useUI();
 
   return (
-    <Button
-      className={`${isSidebarOpen ? 'active' : ''}`}
-      onClick={isSidebarOpen ? closeSidebar : openSidebar}
-    >
-      <Line />
-      <Line />
-      <Line />
-      <span onClick={closeSidebar}>Close</span>
+    <Button onClick={isSidebarOpen ? closeSidebar : openSidebar}>
+      <Line className={`line line-1 ${isSidebarOpen ? 'active' : ''}`} />
+      <Line className={`line line-2 ${isSidebarOpen ? 'active' : ''}`} />
+      <Line className={`line line-3 ${isSidebarOpen ? 'active' : ''}`} />
     </Button>
   );
 };
@@ -29,35 +25,21 @@ const Button = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   cursor: pointer;
+  border-radius: 50%;
   z-index: 150;
 
-  span {
-    position: absolute;
-    width: 6rem;
-    height: 2rem;
-    left: 3rem;
-    background: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.white};
-    font-size: 1rem;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .active.line {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .active.line-1 {
+    transform: rotate(45deg) translate(4px, 8px);
+  }
+  .active.line-2 {
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s;
-
-    ::before {
-      content: '';
-      position: absolute;
-      border-top: 10px solid transparent;
-      border-right: 10px solid ${({ theme }) => theme.colors.primary};
-      border-left: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      top: 50%;
-      left: -1.2rem;
-      transform: translateY(-50%);
-    }
+  }
+  .active.line-3 {
+    transform: rotate(-45deg) translate(4px, -8px);
   }
 `;
 
@@ -65,7 +47,9 @@ const Line = styled.div`
   width: 100%;
   height: 2px;
   background: ${({ theme }) => theme.colors.white};
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  transition: all 0.2s;
 `;
 
 export default HamburgerButton;

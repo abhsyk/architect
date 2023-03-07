@@ -11,7 +11,7 @@ const Hero: FC = () => {
           initial="hidden"
           animate="show"
           src="/images/hero-bg.jpg"
-          alt=""
+          alt="hero"
         />
       </ImageWrapper>
       <Banner variants={container} initial="hidden" animate="show">
@@ -38,7 +38,7 @@ const StyledHero = styled.div`
 const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: #000;
   overflow: hidden;
 
   img {
@@ -62,7 +62,7 @@ const Banner = styled(motion.div)`
     width: 50%;
     line-height: 5rem;
     letter-spacing: 0.1rem;
-    text-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
   }
 
   p {
@@ -72,7 +72,7 @@ const Banner = styled(motion.div)`
     line-height: 2rem;
     letter-spacing: 0.05rem;
     margin-bottom: 3rem;
-    text-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
   }
 
   button {
@@ -84,13 +84,13 @@ const Banner = styled(motion.div)`
     text-transform: uppercase;
     background-color: #c29525;
     color: #fff;
-    text-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
     cursor: pointer;
   }
 `;
 
-// Animation variants
+// Animation variables
 const container = {
   hidden: { y: 100 },
   show: {
@@ -112,7 +112,7 @@ const bgAnim = {
   hidden: { scale: 1.5, opacity: 0 },
   show: {
     scale: 1,
-    opacity: 1,
+    opacity: 0.7,
     transition: {
       ease: 'easeOut',
       duration: 10,
