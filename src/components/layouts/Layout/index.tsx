@@ -1,31 +1,32 @@
-import { FC, PropsWithChildren } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import { FC } from 'react';
+import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from '../../../styles';
 import { HamburgerButton, ScrollButton } from '../../ui';
 import { useUI } from '../../../context';
-import { Sidebar } from '../../section';
+import { About, Contact, Footer, Hero, Sidebar, Team } from '../../section';
 import { AnimatePresence } from 'framer-motion';
 
-const Layout: FC<PropsWithChildren> = ({ children }) => {
+const Layout: FC = () => {
   const { isSidebarOpen } = useUI();
 
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <StyledLayout>
-          <HamburgerButton />
-          <AnimatePresence>{isSidebarOpen && <Sidebar />}</AnimatePresence>
-          {children}
-          <ScrollButton />
-        </StyledLayout>
+        <HamburgerButton />
+
+        {/* Sections */}
+        <AnimatePresence>{isSidebarOpen && <Sidebar />}</AnimatePresence>
+        <Hero />
+        <About />
+        <Team />
+        <Contact />
+        <Footer />
+
+        <ScrollButton />
       </ThemeProvider>
     </>
   );
 };
-
-const StyledLayout = styled.div`
-  /* display: none; */
-`;
 
 export default Layout;
