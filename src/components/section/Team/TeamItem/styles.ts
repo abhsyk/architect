@@ -59,34 +59,42 @@ export const Info = styled.div`
 
   /* Position */
   h3 {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
     font-family: ${({ theme }) => theme.fonts.seconday};
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    color: ${({ theme }) => theme.colors.red};
+    background: ${({ theme }) => theme.colors.red};
+    color: ${({ theme }) => theme.colors.white};
     margin-bottom: 1rem;
+    border-radius: 0.2rem;
   }
 
   /* Description */
   p {
     font-family: ${({ theme }) => theme.fonts.primary};
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
     font-weight: 300;
     color: ${({ theme }) => theme.colors.white};
     margin-bottom: 1.5rem;
   }
 
   button {
-    width: 6rem;
+    display: flex;
+    align-items: center;
     height: 1.8rem;
-    background: ${({ theme }) => theme.colors.primary};
+    background: transparent;
     border: none;
     font-family: ${({ theme }) => theme.fonts.primary};
     font-size: 1rem;
     color: ${({ theme }) => theme.colors.white};
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     border-radius: 0.2rem;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
     cursor: pointer;
+
+    svg {
+      margin-left: 0.5rem;
+    }
   }
 `;

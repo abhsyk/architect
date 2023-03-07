@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Card, ImageWrapper, Info } from './styles';
+import { FaArrowRight } from 'react-icons/fa';
 
 type Props = {
   image: string;
@@ -21,7 +22,9 @@ const TeamItem: FC<Props> = ({ name, position, description, image }) => {
         <h2>{name}</h2>
         <h3>{position}</h3>
         <p>{description}</p>
-        <button>Read More</button>
+        <button>
+          Read More <FaArrowRight />
+        </button>
       </Info>
     </Card>
   );

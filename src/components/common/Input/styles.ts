@@ -9,7 +9,7 @@ export const StyledInput = styled.div`
     width: 25rem;
     background-color: transparent;
     border: none;
-    border-bottom: 0.2rem dashed ${({ theme }) => theme.colors.darkGray};
+    border-bottom: 0.2rem dashed ${({ theme }) => theme.colors.darkGrey};
     margin: 1.5rem 0;
     padding: 1rem 1rem 1rem 0;
     font-family: ${({ theme }) => theme.fonts.seconday};

@@ -5,7 +5,7 @@ import { respondTo } from '../../../styles';
 // Styles
 export const StyledAbout = styled(motion.div)`
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: ${({ theme }) => theme.colors.lightGrey};
   padding-top: 1rem;
   padding-bottom: 8rem;
 

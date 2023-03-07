@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { respondTo } from '../../../styles';
+import { SocialMedia } from '../../common';
 
 // Styles
 export const StyledFooter = styled.div`
@@ -40,5 +41,11 @@ export const Copyright = styled.div`
 
   @media ${respondTo.lg} {
     padding-bottom: 1rem;
+  }
+`;
+
+export const Social = styled(SocialMedia)`
+  a {
+    color: ${({ theme }) => theme.colors.grey};
   }
 `;

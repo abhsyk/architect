@@ -32,7 +32,7 @@ export const Item = styled.li`
   font-size: 2rem;
 
   span {
-    color: ${({ theme }) => theme.colors.darkGray};
+    color: ${({ theme }) => theme.colors.darkGrey};
     position: relative;
     cursor: pointer;
 

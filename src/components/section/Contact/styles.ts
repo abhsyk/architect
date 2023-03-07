@@ -6,7 +6,7 @@ import { respondTo } from '../../../styles';
 export const StyledContact = styled(motion.div)`
   width: 100%;
   height: 80vh;
-  background: ${({ theme }) => theme.colors.darkGray2};
+  background: ${({ theme }) => theme.colors.darkGrey2};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,9 +84,9 @@ export const Right = styled.div`
     font-family: ${({ theme }) => theme.fonts.seconday};
     font-size: 1rem;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 2px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 

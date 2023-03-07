@@ -7,7 +7,7 @@ export const StyledSocial = styled.div`
   a {
     margin: 0 1rem;
     font-size: 1.5rem;
-    color: ${({ theme }) => theme.colors.darkGray};
+    color: ${({ theme }) => theme.colors.darkGrey};
     cursor: pointer;
   }
 `;

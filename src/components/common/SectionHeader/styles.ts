@@ -18,7 +18,7 @@ export const Header = styled.div`
     font-family: ${({ theme }) => theme.fonts.seconday};
     font-size: 2.5rem;
     font-weight: 300;
-    color: ${({ theme }) => theme.colors.darkGray};
+    color: ${({ theme }) => theme.colors.darkGrey};
     margin-bottom: 2rem;
   }
 `;

@@ -10,6 +10,18 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
     text-decoration: none;
   }
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0, 0.5);
+    border-radius: 10px;
+    border: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
 `;
 
 // Define what props.theme will look like

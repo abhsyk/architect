@@ -2,12 +2,13 @@
 export const colors = {
   primary: '#ECB365', // yellow-ish
   secondary: '#041C32',
-  darkGray: '#4b4b4b',
   grey: '#A7A7A7',
-  darkGray2: '#272727',
+  lightGrey: '#F5F5F5',
+  darkGrey: '#4b4b4b',
+  darkGrey2: '#272727',
   black: '#000',
   white: '#FFF',
-  red: '#A52A2A',
+  red: '#FF5F9E',
 };
 
 // Fonts
