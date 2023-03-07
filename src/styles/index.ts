@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
 const colors = {
   primary: '#E2B646', // yellow-ish
+  darkGray: '#4b4b4b',
   grey: '#A7A7A7',
   black: '#272727',
   white: '#FFF',
