@@ -1,36 +1,9 @@
 import { motion } from 'framer-motion';
-import { FC } from 'react';
 import styled from 'styled-components';
-import { respondTo } from '../../../styles';
-
-type Props = {
-  image: string;
-  name: string;
-  position: string;
-  description: string;
-};
-
-const TeamItem: FC<Props> = ({ name, position, description, image }) => {
-  return (
-    <Card
-      whileHover={{ scale: 1.05, transition: { duration: 0.4 } }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <ImageWrapper>
-        <img src={image} alt={position} />
-      </ImageWrapper>
-      <Info className="info">
-        <h2>{name}</h2>
-        <h3>{position}</h3>
-        <p>{description}</p>
-        <button>Read More</button>
-      </Info>
-    </Card>
-  );
-};
+import { respondTo } from '../../../../styles';
 
 // Styles
-const Card = styled(motion.div)`
+export const Card = styled(motion.div)`
   position: relative;
   width: 22rem;
   height: 30rem;
@@ -54,7 +27,7 @@ const Card = styled(motion.div)`
   }
 `;
 
-const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   background: #000;
@@ -67,7 +40,7 @@ const ImageWrapper = styled.div`
   }
 `;
 
-const Info = styled.div`
+export const Info = styled.div`
   position: absolute;
   bottom: 0;
   padding: 1.5rem;
@@ -117,5 +90,3 @@ const Info = styled.div`
     cursor: pointer;
   }
 `;
-
-export default TeamItem;
