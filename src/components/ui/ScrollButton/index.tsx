@@ -1,8 +1,8 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { FC, useEffect, useState } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
-import styled from 'styled-components';
-import { respondTo } from '../../../styles';
+import { scrollAnim } from './animations';
+import { Button } from './styles';
 
 const ScrollButton: FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,42 +45,6 @@ const ScrollButton: FC = () => {
       )}
     </AnimatePresence>
   );
-};
-
-// Styles
-const Button = styled(motion.div)`
-  position: fixed;
-  right: 2.5rem;
-  bottom: 2.5rem;
-  color: ${({ theme }) => theme.colors.white};
-  width: 3rem;
-  height: 3rem;
-  background: ${({ theme }) => theme.colors.primary};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  border-radius: 50%;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-
-  @media ${respondTo.sm} {
-    width: 3.5rem;
-    height: 3.5rem;
-    font-size: 1.2rem;
-  }
-`;
-
-// Animation variants
-const scrollAnim = {
-  initial: { y: '.5rem', opacity: 0 },
-  animate: {
-    y: '0rem',
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
 };
 
 export default ScrollButton;
