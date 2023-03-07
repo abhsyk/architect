@@ -8,6 +8,11 @@ import { SocialMedia } from '../../common';
 const Sidebar: FC = () => {
   const { isSidebarOpen, closeSidebar } = useUI();
 
+  const handleClick = (location: string) => {
+    window.location.replace(location);
+    closeSidebar();
+  };
+
   useEffect(() => {
     if (isSidebarOpen) {
       document.body.style.overflowY = 'hidden';
@@ -25,30 +30,17 @@ const Sidebar: FC = () => {
         exit="exit"
       >
         <Menu>
-          <Item>
-            <a href="/" data-content="Home">
-              Home
-            </a>
+          <Item onClick={() => handleClick('/#home')} data-content="Home">
+            Home
           </Item>
-          <Item>
-            <a href="/" data-content="About">
-              About
-            </a>
+          <Item onClick={() => handleClick('/#about')} data-content="About">
+            About
           </Item>
-          <Item>
-            <a href="/" data-content="Team">
-              Team
-            </a>
+          <Item onClick={() => handleClick('/#team')} data-content="Team">
+            Team
           </Item>
-          <Item>
-            <a href="/" data-content="Pricing">
-              Pricing
-            </a>
-          </Item>
-          <Item>
-            <a href="/" data-content="Contact">
-              Contact
-            </a>
+          <Item onClick={() => handleClick('/#contact')} data-content="Contact">
+            Contact
           </Item>
         </Menu>
         <Social />
@@ -93,36 +85,34 @@ const Menu = styled.ul`
 
 const Item = styled.li`
   text-align: center;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-size: 2rem;
+  color: ${({ theme }) => theme.colors.grey};
+  position: relative;
+  cursor: pointer;
 
-  a {
-    font-family: ${({ theme }) => theme.fonts.primary};
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.grey};
-    position: relative;
+  @media ${respondTo.xl} {
+    font-size: 1.8rem;
+  }
+  @media ${respondTo.md} {
+    display: inline-block;
+    margin: 0.5rem 0;
+  }
 
-    @media ${respondTo.xl} {
-      font-size: 1.8rem;
-    }
-    @media ${respondTo.md} {
-      display: inline-block;
-      margin: 0.5rem 0;
-    }
+  ::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    color: ${({ theme }) => theme.colors.primary};
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease-in-out;
+  }
 
-    ::before {
-      content: attr(data-content);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      color: ${({ theme }) => theme.colors.primary};
-      overflow: hidden;
-      white-space: nowrap;
-      transition: width 0.3s ease-in-out;
-    }
-
-    :hover::before {
-      width: 100%;
-    }
+  :hover::before {
+    width: 100%;
   }
 `;
 

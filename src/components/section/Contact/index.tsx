@@ -14,6 +14,7 @@ const Contact: FC = () => {
       initial="hidden"
       animate={controls}
       ref={element}
+      id="contact"
     >
       <Wrapper variants={container} initial="hidden" animate="show">
         <Left />

@@ -67,6 +67,7 @@ const About: FC = () => {
       initial="hidden"
       animate={controls}
       ref={element}
+      id="about"
     >
       <SectionHeader title="About" />
       <Services variants={container} initial="hidden" animate="show">
@@ -195,13 +196,10 @@ const ImageWrapper = styled(motion.div)`
   grid-row: 2 / 6;
   width: 100%;
 
-  @media ${respondTo.xl} {
-    grid-row: 3 / -1;
-  }
   @media ${respondTo.lg} {
     width: 60%;
   }
-  @media ${respondTo.lg} {
+  @media ${respondTo.md} {
     width: 70%;
   }
 

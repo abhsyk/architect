@@ -14,6 +14,7 @@ const Team: FC = () => {
       initial="hidden"
       animate={controls}
       ref={element}
+      id="team"
     >
       <SectionHeader title="Team" />
       <Cards>

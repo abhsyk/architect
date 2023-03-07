@@ -5,7 +5,7 @@ import { respondTo } from '../../../styles';
 
 const Hero: FC = () => {
   return (
-    <StyledHero>
+    <StyledHero id="home">
       <ImageWrapper>
         <motion.img
           variants={bgAnim}
