@@ -15,22 +15,22 @@ const Team: FC = () => {
       ref={element}
       id="team"
     >
-      <SectionHeader title="Team" />
+      <SectionHeader title="Our Team" />
       <Cards>
         <TeamItem
-          name="John Smith"
+          name="Geghard Stepan"
           position="CEO"
-          description='"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, impedit!"'
+          description='"Pellentesque tempor convallis bibendum. Curabitur mattis odio sed orci bibendum viverra."'
           image="images/person-1.jpg"
         />
         <TeamItem
-          name="Ann Brown"
+          name="Karine Siran"
           position="Designer"
           description='"Ut iaculis justo vitae risus bibendum vestibulum. Donec mi sapien, tempor at tortor vel."'
           image="images/person-2.jpg"
         />
         <TeamItem
-          name="Mary Doe"
+          name="Elen Anahit"
           position="Architect"
           description='"Fusce ullamcorper eu massa id rhoncus. Duis non sem ac quam tincidunt iaculis."'
           image="images/person-3.jpg"

@@ -89,6 +89,7 @@ export const Banner = styled(motion.div)`
     color: ${({ theme }) => theme.colors.white};
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+    border-radius: 0.2rem;
     cursor: pointer;
 
     @media ${respondTo.xl} {

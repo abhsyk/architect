@@ -36,10 +36,10 @@ const Sidebar: FC = () => {
             <span data-content="Home">Home</span>
           </Item>
           <Item onClick={() => handleLocationReplace('/#about')}>
-            <span data-content="About">About</span>
+            <span data-content="About Us">About Us</span>
           </Item>
           <Item onClick={() => handleLocationReplace('/#team')}>
-            <span data-content="Team">Team</span>
+            <span data-content="Our Team">Our Team</span>
           </Item>
           <Item onClick={() => handleLocationReplace('/#contact')}>
             <span data-content="Contact">Contact</span>

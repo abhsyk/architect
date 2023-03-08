@@ -7,7 +7,7 @@ export const containerAnim = {
     transition: {
       duration: 1,
       ease: 'easeOut',
-      staggerChildren: 0.3,
+      staggerChildren: 0.25,
     },
   },
 };

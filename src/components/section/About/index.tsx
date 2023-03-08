@@ -35,8 +35,13 @@ const About: FC = () => {
       ref={element}
       id="about"
     >
-      <SectionHeader title="About" />
-      <Services variants={containerAnim} initial="hidden" animate="show">
+      <SectionHeader title="About Us" />
+      <Services
+        variants={containerAnim}
+        initial="hidden"
+        animate={controls}
+        ref={element}
+      >
         {/* Service items */}
         {renderServiceItems()}
         <ImageWrapper variants={serviceAnim}>

@@ -12,8 +12,8 @@ type Props = {
 const TeamItem: FC<Props> = ({ name, position, description, image }) => {
   return (
     <Card
-      whileHover={{ scale: 1.05, transition: { duration: 0.4 } }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.02, transition: { duration: 0.4 } }}
+      whileTap={{ scale: 0.98 }}
     >
       <ImageWrapper>
         <img src={image} alt={position} />
